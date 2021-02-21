@@ -104,8 +104,8 @@ if __name__=="__main__":
 ```
 
 
-When executing it we get the following output:
+When executing it we get the following output:<br>
 ![terminal output](./terminal_exploit_execution.png)<br>
-
+<br>
 Well done! <br>
 We got the flag `darkCON{w0nd3rful_m4k1n9_sh3llc0d3_us1n9_r0p!!!}` !
