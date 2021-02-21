@@ -9,7 +9,7 @@ There is also an inpt field we shall put our reversed flag into.<br>
 
 I used a great tool called [uncompyle6](https://github.com/rocky/python-uncompyle6) for decompiling the binary.
 
-The result is good, but most function and variable are gibberish like "ubbaaalubba" so I tidied it up a bit.
+The result is good, but most function and variable are named gibberish like "ubbaaalubba" so I tidied it up a bit.
 
 I noticed this here: `helpful_key = 'you-may-need-this-key-1337'` in the code and noted it down.
 
