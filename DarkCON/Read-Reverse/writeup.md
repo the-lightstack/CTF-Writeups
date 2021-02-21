@@ -50,6 +50,6 @@ I at first didn't notice, that there was actual text written but this here is ac
 
 So the flag is: `darkCON{0bfu5c4710ns_v5_4n1m4710ns}`
 
-We ca enter it into the read.pyc application and it indeed tells us that it is right!
+We can enter it into the read.pyc application and it indeed tells us that it is right!
 
 
