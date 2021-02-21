@@ -36,16 +36,17 @@ I used [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) and came up with
 
 ## The Plan
 
-pop writable location into rsi >> 
-pop "/bin/sh" into rax >> 
-call write gadget >> 
-pop writable +8 into rsi >> 
-pop (anything) into rax >> 
-call writegadget >> 
-pop /bin/sh location into rdi (the first syscall parameter) >> 
-pop the junk data location into rsi and rdx (2. and 3. argument) >>
-pop 0x3b into rax (=(dec)59; syscall number for execve) >> 
-make syscall
+pop writable location into rsi >> <br>
+pop "/bin/sh" into rax >> <br>
+call write gadget >> <br>
+pop writable +8 into rsi >> <br>
+pop (anything) into rax >> <br>
+call writegadget >> <br>
+pop /bin/sh location into rdi (the first syscall parameter) >> <br>
+pop the junk data location into rsi and rdx (2. and 3. argument) >><br>
+pop 0x3b into rax (=(dec)59; syscall number for execve) >> <br>
+make syscall >> <br>
+Enjoy our flag!<br>
 
 --------------------------------
 
