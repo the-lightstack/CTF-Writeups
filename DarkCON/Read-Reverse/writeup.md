@@ -27,10 +27,10 @@ def actions(user_input): #triggers to check if inputted string is right
 ``` 
 
 The above code takes an input (use_input) and then loops over data_list and helpful_key, xor's them and checks if the result represented as a character is the same as input string.
-
-73 13 19 88 88 2 77 26 95 85 11 23 114 2 93 54 71 67 90 8 77 26 0 3 93 68
-y  o  u  -  m  a y  -  n  e  e  d  -   t h  i  s  -  k  e y  -  1 3 3  7
-
+<br>
+73 13 19 88 88 2 77 26 95 85 11 23 114 2 93 54 71 67 90 8 77 26 0 3 93 68<br>
+y  o  u  -  m  a y  -  n  e  e  d  -   t h  i  s  -  k  e y  -  1 3 3  7<br>
+<br>
 That means if we Xor them ourselves, we get the key required!
 
 My small python script for doing so:
