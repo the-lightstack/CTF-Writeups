@@ -24,15 +24,15 @@ What we have to do:<br>
 <br>
 The challenge is called EasyROP, so let's look for some fitting ROP gadgets.
 I used [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) and came up with the following list of gadgets I would need:
-
-\[+] Gadget found: 0x4012d3 syscall 							; making the syscall
-\[+] Gadget found: 0x481e65 mov qword ptr \[rsi], rax ; ret 	; writing memory 
-\[+] Gadget found: 0x40f4be pop rsi ; ret 					; controlling the rsi register
-\[+] Gadget found: 0x4175eb pop rax ; ret 					; controlling rax
-\[+] Gadget found: 0x40191a pop rdi ; ret 					; ...
-\[+] Gadget found: 0x40f4be pop rsi ; ret 
-\[+] Gadget found: 0x40181f pop rdx ; ret
-
+<br>
+\[+] Gadget found: 0x4012d3 syscall 				; making the syscall<br>
+\[+] Gadget found: 0x481e65 mov qword ptr \[rsi], rax ; ret 	; writing memory <br>
+\[+] Gadget found: 0x40f4be pop rsi ; ret 			; controlling the rsi register<br>
+\[+] Gadget found: 0x4175eb pop rax ; ret 			; controlling rax<br>
+\[+] Gadget found: 0x40191a pop rdi ; ret 			; ...<br>
+\[+] Gadget found: 0x40f4be pop rsi ; ret <br>
+\[+] Gadget found: 0x40181f pop rdx ; ret<br>
+<br>
 
 ## The Plan
 
