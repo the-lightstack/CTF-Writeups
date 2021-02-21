@@ -3,7 +3,7 @@
 The challenge gives us a `read.pyc` file, so a python compiled file.
 When running it, we see a beautiful animation reading "READ" and a scrolling text under it.
 There is also an inpt field we shall put our reversed flag into.
-
+![read.pyc output](./read_pyc_screen.png)
 I used a great tool called [uncompyle6](https://github.com/rocky/python-uncompyle6) for decompiling the binary.
 
 The result is good, but most function and variable are gibberish like "ubbaaalubba" so I tidied it up a bit.
