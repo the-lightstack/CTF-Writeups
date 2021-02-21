@@ -19,11 +19,9 @@ The next 8bytes are the return pointer that will be POPped.
 ## Preparation
 Now I thought about my objective:
 Getting a shell
-
-What do we have to do so:
-	1.Write "/bin/sh" somewhere in memory
-	2.make a syscall or call system with the first parameter being the 
-	  location of the string, and the two next parameters being just anything 
+What we have to do:
+1.Write "/bin/sh" somewhere in memory
+2.make a syscall or call system with the first parameter being the location of the string, and the two next parameters being just anything 
 
 The challenge is called EasyROP, so let's look for some fitting ROP gadgets.
 I used [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) and came up with the following list of gadgets I would need:
