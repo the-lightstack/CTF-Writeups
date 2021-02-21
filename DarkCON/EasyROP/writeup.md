@@ -44,7 +44,7 @@ pop (anything) into rax >> <br>
 call writegadget >> <br>
 pop /bin/sh location into rdi (the first syscall parameter) >> <br>
 pop the junk data location into rsi and rdx (2. and 3. argument) >><br>
-pop 0x3b into rax (=(dec)59; syscall number for execve) >> <br>
+pop 0x3b into rax (=(dec)59; [syscall number for execve](https://filippo.io/linux-syscall-table/) >> <br>
 make syscall >> <br>
 Enjoy our flag!<br>
 
