@@ -1,6 +1,6 @@
 ## EasyRop - Writeup
 
-![challenge description](./chall_description.png)
+![challenge description](./chall_description.png)<br>
 We are given a binary that takes user input and then exits:
 `
 Welcome to the darkcon pwn!!
