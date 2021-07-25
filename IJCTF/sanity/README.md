@@ -76,7 +76,7 @@ I formatted it to `00 00 00 00 00 00 0a 06 18 2f 08 0c 3b 2c 0f 01 1d 2b 1f 3e 0
   }
   return 0;
 ```
-The above code can be split into 3 parts:
+The above code can be split into **4** parts:
  1. Assigning needed variables
  2. Computing real flag in memory
  3. Getting user input
