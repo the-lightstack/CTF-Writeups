@@ -17,11 +17,11 @@ GCC: (Debian 10.2.1-6) 10.2.1 20210110
 Because the challenge was labeled **sanity** I of course thought that this was it, but when running the binary and supplying this flag it failed.
 
 Now I loaded it into [ghidra](https://github.com/NationalSecurityAgency/ghidra) to see, what was going on inside the executable.
-After looking around for a bit I noticed the two symbols `key` and `flag`
-![key_flag](./ghidra_view_flag_key.png)
+After looking around for a bit I noticed the two symbols `key` and `flag` <br>
+![key_flag](./ghidra_view_flag_key.png)<br>
 _flag_ is just the string we saw before, _"IJCTF{simple_sanity_check_for_babies}"_
-_key_, on the other hand is a list of hex values as seen here:
-![key_hex_vals](./key_hex_values.png)
+_key_, on the other hand is a list of hex values as seen here:<br>
+![key_hex_vals](./key_hex_values.png)<br>
 
 I formatted it to `00 00 00 00 00 00 0a 06 18 2f 08 0c 3b 2c 0f 01 1d 2b 1f 3e 0f 04 3a 05 04 2d 39 06 06 00 10 08 05 01 11 4c 00 00 00 00`
 
