@@ -18,8 +18,10 @@ Because the challenge was labeled **sanity** I of course thought that this was i
 
 Now I loaded it into [ghidra](https://github.com/NationalSecurityAgency/ghidra) to see, what was going on inside the executable.
 After looking around for a bit I noticed the two symbols `key` and `flag`
+![key_flag](./ghidra_view_flag_key.png)
 _flag_ is just the string we saw before, _"IJCTF{simple_sanity_check_for_babies}"_
 _key_, on the other hand is a list of hex values as seen here:
+![key_hex_vals](./key_hex_values.png)
 
 I formatted it to `00 00 00 00 00 00 0a 06 18 2f 08 0c 3b 2c 0f 01 1d 2b 1f 3e 0f 04 3a 05 04 2d 39 06 06 00 10 08 05 01 11 4c 00 00 00 00`
 
@@ -97,11 +99,11 @@ for i in range(len(flag)):
   print(chr(ord(flag[i])^int(key[i],16)),end="")
 print()
 ```
->> `IJCTF{you_did_not_fall_for_it_right?}`
+> `IJCTF{you_did_not_fall_for_it_right?}`
 
 # Way 2 - Debugging
 By simply running `gdb ./sanity` and then breaking (`b *<addr>`) right before the call to `strcmp` we can read out both arguments. 
 As you know `rdi` is the first and `rsi` the second argument for functions called in assembly (64bit). They are both pointers to the strings that are to be compared. I first did `x/s $rdi` which returned an empty string, but `x/s $rsi` gave us the flag 
-`IJCTF{you_did_not_fall_for_it_right?}`
+> `IJCTF{you_did_not_fall_for_it_right?}`
 
 Hope you liked the writeup :)
