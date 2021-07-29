@@ -6,7 +6,7 @@
 
 # First Look
 
-When examining the binary we are given ([Download here](./jumprope)) with the `file` command, we can see that it is *64bit*, *dynamically linked* and *not stripped* binary, which means the ELF-Execute still has all the symbols, which will make reversing it easier.
+When examining the binary we are given ([Download here](./jumprope)) with the `file` command, we can see that it is *64bit*, *dynamically linked* and *not stripped* binary, which means the ELF-Executable still has all the symbols, which will make reversing it easier.
 Then I of course executed the binary:
 ```txt
 Ice cream!
