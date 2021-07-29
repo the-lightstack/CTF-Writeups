@@ -135,6 +135,8 @@ It gets a bit more tricky when looking at the behavior of *o* and *t*.
 ```
 Before printing the letter, this function (**o**) also checks, whether rdi holds `0x0x1337c0d3`. **T** is the same but checks for `0xdeadface`<br>
 By this point I was pretty sure we had to perform some kind of return-oriented-programming or ROP.<br>
+If you haven't heard of it before, just know that we are overwriting the return pointer that was placed on the stack when **checkFlag** was invoked by **main**.
+The *ret* instruction at the end of **checkFlag** will *pop* our custom value which is the address of **c**.
 
 The Game Plan
 --------------
@@ -180,6 +182,8 @@ for i in range(len(byte_payload)):
 
 print("Payload:",xored_byte_payload)
 ```
+Our payload consists of 11 Values and because scanf takes 88 bytes, those 11 values should all be 8bytes or 64 bit long. That's why I used pwntools **p64()** function to convert the values to 64 bytes.<br>
+
 This will actually already give us the flag!<br>
 Payload: **b'ictf{n0t_last_night_but_the_night_bef0re_twenty_f0ur_hackers_came_a_kn0cking_at_my_d00r}'**<br>
 <br>
