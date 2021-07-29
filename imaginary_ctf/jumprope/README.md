@@ -207,14 +207,13 @@ Thanks for hanging around for this long and I hope you learned something!
 
 # TL;DR
 To output **CORRECT!** we have to assemble a ROP-chain and encrypt it with the same algorithm the **checkFlag** function uses, which is just *xoring* every byte with one generated and one stored other byte.
-This encrypted payload is also the flag:`ictf{n0t_last_night_but_the_night_bef0re_twenty_f0ur_hackers_came_a_kn0cking_at_my_d00r}`<br>
+This encrypted payload is also the flag:  `ictf{n0t_last_night_but_the_night_bef0re_twenty_f0ur_hackers_came_a_kn0cking_at_my_d00r}`<br>
 And will print:
-```txt
-C!
-O!
-R!
-R!
-E!
-C!
-T!
-```
+<br>
+C!<br>
+O!<br>
+R!<br>
+R!<br>
+E!<br>
+C!<br>
+T!<br>
