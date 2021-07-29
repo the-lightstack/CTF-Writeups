@@ -85,7 +85,7 @@ undefined8 checkFlag(void)
   char* rbp[?];
   while (count < 0x60) {
     val = (byte)next(val);
-    			     // ↓(user-input)
+             // ↓(user-input)
     rbp[count] =  rbp[count]  ^ val ^ (x [(count-8)] ); 
 
     count ++;												 
