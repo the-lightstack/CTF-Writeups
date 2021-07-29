@@ -25,7 +25,7 @@ Segmentation fault (core dumped)
 ```
 
 
-Strangely we end up segfaulting and not getting a response like **Wrong flag.**, but we will come back to this behavior later, let's first look at the source code [ghidra](https://github.com/NationalSecurityAgency/ghidra) decompiled for us.
+Strangely we end up segfaulting and not getting a response like **"Wrong flag."**, but we will come back to this behavior later, let's first look at the source code [ghidra](https://github.com/NationalSecurityAgency/ghidra) decompiled for us.
 
 The main function looks like this
 ```c
