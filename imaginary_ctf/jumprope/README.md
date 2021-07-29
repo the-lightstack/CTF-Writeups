@@ -197,7 +197,7 @@ if "x" in sys.argv:
     p.interactive()
 ```
 When executing the script like so `python3 solve.py x` we will now start a process and see the magic of our **ROP** chain happen!<br>
-![exploit_exec](./exploit_execution)
+![exploit_exec](./exploit_execution.gif)
 <br>
 Thanks for hanging around for this long and I hope you learned something!
 
