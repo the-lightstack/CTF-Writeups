@@ -2,7 +2,7 @@
 **Category:** Reverse Engineering<br>
 **Points:** 200<br>
 **CTF:** [imaginaryCTF 2021](https://2021.imaginaryctf.org) <br>
-[TL;DR](#TL;DR)
+[TL;DR](#tldr)
 
 # First Look
 
