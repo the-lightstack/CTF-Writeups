@@ -157,6 +157,7 @@ Jump to pop-rdi-gadget  -> 0x0040148b
 Rdi-Value               -> 0xdeadface
 Jump to t               -> 0x00401295
 ```
+(*pop rdi* gadget found with ROPGadget)
 If we would input it like this though, it would get messed up by the xor that happens in the **checkFlag** function, so lets enrypt our payload now!<br>
 **XOR** is a reversible action, which means that if you do `3^5 = 6`, you can recover the original state by doing `5^6 = 3`. So if we encrypt our payload the same way it will later be en-/decrypted in the binary we will have our plain "exploi" laying on the stack read to call those tasty **CORRECT** functions!
 ```py
