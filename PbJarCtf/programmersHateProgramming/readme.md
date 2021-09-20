@@ -1,6 +1,6 @@
 # ProgrammersHateProgramming - Web challenge
 
-When opening the provided web page, we could an input field to create new notes and 2 Pre-defined notes.
+When opening the provided web page, we see an input field to create new notes and 2 pre-defined notes.
 We were given the source code which reveals, that for every incoming POST request with a `notewrite` data field, the application (written in php) creates a new file with the contents of the note.
 At first there are some filters applied though, which hint to injecting either javascript via a XSS or injecting server-side
 rendered php, which makes a lot more sense, since there is no bot visiting our notes.
