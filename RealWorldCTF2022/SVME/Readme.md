@@ -8,17 +8,13 @@
 
 **CTF:** RealWorldCTF 2022
 
-**Exploit Code**: 
-
-[TOC]
-
-
+**Exploit Code**: [read](#The Exploit Code) or [download](https://github.com/the-lightstack/CTF-Writeups/tree/main/RealWorldCTF2022/SVME/works.py)
 
 -------------
 
 # Step 1 - How to get the source Code
 
-The first step to exploiting a Virtual Machine is obviously, if possible, obtaining the VM's implementation. For this challenge, we were provided with the [following tar archive](https://github.com/the-lightstack), which contains a `libc-2.31.so`, an `svme` binary (the file we are going to exploit) and a `docker` directory, which itself contains `main.c` ( the code that uses some `vm.h` we don't have) and a `Dockerfile`.  In the `Dockerfile` we find the following command to fetch the `vm.h` library: ```wget --no-check-certificate https://github.com/parrt/simple-virtual-machine-C/archive/refs/heads/master.zip -O svme.zip ```. I executed the wget command on my machine and started investigating `vm.h`, `vm.c` and `vmtest.c` in VScode.
+The first step to exploiting a Virtual Machine is obviously, if possible, obtaining the VM's implementation. For this challenge, we were provided with [these files](https://github.com/the-lightstack/CTF-Writeups/tree/main/RealWorldCTF2022/SVME/files), which contains a `libc-2.31.so`, an `svme` binary (the file we are going to exploit) and a `docker` directory, which itself contains `main.c` ( the code that uses some `vm.h` we don't have) and a `Dockerfile`.  In the `Dockerfile` we find the following command to fetch the `vm.h` library: ```wget --no-check-certificate https://github.com/parrt/simple-virtual-machine-C/archive/refs/heads/master.zip -O svme.zip ```. I executed the wget command on my machine and started investigating `vm.h`, `vm.c` and `vmtest.c` in VScode.
 
 # Step 2 - Finding the vulnerabilities
 
